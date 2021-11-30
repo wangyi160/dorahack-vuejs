@@ -45,7 +45,7 @@
     <div class="cardList">
       <div class="works" v-for='(item,index) in cardList' :key='index' v-show='current === 1'>
         <img class='picture' :src='item.imageUrl' alt="" @click='toDetail(item.imageUrl, item.id)'>
-        <div class="name">{{item.name}}</div>
+        <div class="name">{{item.name}} </div>
         <div class="authorAndPricd">
           <span class='userId'>{{item.userId}}</span>
           <div v-show='item.status === "on_auction"'>
@@ -77,13 +77,27 @@ export default {
     return {
       url:'http://localhost:9091/dorahack/artwork/all-new-arts',
       current: 1,
-      cardList2: [],
+      cardList2: [{
+          name:'beeple大神作品',
+          userId: 'michael',
+          price: '12.34',
+          url: '1',
+          
+        },
+        {
+          name:'beeple大神作品',
+          userId: 'michael',
+          price: '12.34',
+          url: '2',
+        },],
       cardList: [
         {
           name:'beeple大神作品',
           userId: 'michael',
           price: '12.34',
           url: '1',
+          imageUrl: 'wangyi',
+          id: '111'
         },
         {
           name:'beeple大神作品',
@@ -157,6 +171,7 @@ export default {
   created(){
     this.getList()
     if (typeof web3 !== 'undefined') {
+      console.log("web3 is injected")
       web3 = new Web3(web3.currentProvider);
     } else {
       // set the provider you want from Web3.providers

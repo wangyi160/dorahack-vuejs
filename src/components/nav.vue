@@ -53,35 +53,37 @@ export default {
   methods: {
     async handleClick(){
       // Check if MetaMask is installed
-		if (!window.ethereum) {
-			window.alert('Please install MetaMask first.');
-			return;
-		}
-    
-		if (!web3) {
-			try {
-				// Request account access if needed
-				await window.ethereum.enable();
+      if (!window.ethereum) {
+        window.alert('Please install MetaMask first.');
+        return;
+      }
+      
+      if (!web3) {
+        try {
+          // Request account access if needed
+          await window.ethereum.enable();
 
-				// We don't know window.web3 version, so we use our own instance of Web3
-				// with the injected provider given by MetaMask
-				web3 = new Web3(window.ethereum)
-			} catch (error) {
-				window.alert('You need to allow MetaMask.');
-				return;
-			}
-		}
-    console.log('web3',web3.eth)
-		const coinbase = await web3.eth.getCoinbase();
-		if (!coinbase) {
-			window.alert('Please activate MetaMask first.');
-			return;
-		}
+          // We don't know window.web3 version, so we use our own instance of Web3
+          // with the injected provider given by MetaMask
+          web3 = new Web3(window.ethereum)
+        } catch (error) {
+          window.alert('You need to allow MetaMask.');
+          return;
+        }
+      }
+      console.log('web3',web3.eth)
 
-		const publicAddress = coinbase.toLowerCase();
-		// setLoading(true);
-    // TODO: "connect wallet -> public address"
-    alert("You are logged in with " + publicAddress);
+      // Returns the coinbase address to which mining rewards will go.
+      const coinbase = await web3.eth.getCoinbase();
+      if (!coinbase) {
+        window.alert('Please activate MetaMask first.');
+        return;
+      }
+
+      const publicAddress = coinbase.toLowerCase();
+      // setLoading(true);
+      // TODO: "connect wallet -> public address"
+      alert("You are logged in with " + publicAddress);
     
 		// Look if user with current publicAddress is already present on backend
 		// fetch(

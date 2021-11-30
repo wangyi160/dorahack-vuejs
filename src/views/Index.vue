@@ -4,13 +4,14 @@
     <div class="_body">
       <router-view></router-view>
     </div>
+    <bottom-footer></bottom-footer>
   </div>
 
 </template>
 
 <script>
-import topNav from '../components/nav'
-import bottomFooter from '../components/footer'
+import topNav from '../components/nav_new'
+import bottomFooter from '../components/footer_new'
 import common from '../common'
 export default {
   components: {

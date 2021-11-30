@@ -7,9 +7,9 @@
       <div class="main">
         <p class='author'>艺术家<span class='authorName'> beeple </span>创作</p>
         <p class='title'> {{artName}} </p>
-        <p class='idAndHash'>ID:1000300002 ▪ Hesh:<span class='hash'>#0xd92e ... 7fa96</span></p>
+        <p class='idAndHash'>ID:1000300002 ▪ Hash:<span class='hash'>#0xd92e ... 7fa96</span></p>
         <p class='source'>由 <span class='owner'>{{ownerId}}</span>拥有</p>
-        <p class="descripe">Colorful and playful characters will help you create awesome websites and applications. "我不是那种会认为世界即将终结的人，不会有那种一切都会变得一团糟，20年后我们还是被限制在地上吃着烂泥的想法。我一般是很乐观的，我认为我们的社会会继续发展下去——可怕的事情正在发生，但也有很多美好的事情正在发生。（绝不是redmi软广！）"</p>
+        <p class="description">Colorful and playful characters will help you create awesome websites and applications. "我不是那种会认为世界即将终结的人，不会有那种一切都会变得一团糟，20年后我们还是被限制在地上吃着烂泥的想法。我一般是很乐观的，我认为我们的社会会继续发展下去——可怕的事情正在发生，但也有很多美好的事情正在发生。（绝不是redmi软广！）"</p>
         <p class='opera'><span class="label">标签</span><span class="link">链接</span></p>
         <p class="priceAndTime">
           <span>历史价格</span>
@@ -238,7 +238,7 @@ export default {
           color: #00ACA9;
         }
       }
-      .descripe{
+      .description{
         margin-top: 10px;
         margin-bottom: 19px;
         font-size: 16px;

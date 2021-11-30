@@ -112,3 +112,12 @@ Initially set as 97/1/1/1
   - 在区块链支付时抢（浪费gas fee）
 
 ![](http://github.com/michaelran16/dorahack-vuejs/raw/main/src/assets/logo.png)
+
+
+# vue的一些总结教程
+
+1. 入口文件
+
+如果vue.config.js中没有特殊指定，那么默认的入口文件是src/main.js
+
+
