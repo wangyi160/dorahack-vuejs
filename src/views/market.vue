@@ -5,13 +5,13 @@
     <div class="card" @click='changeCard(1)'>最新</div>
     <div class="card" @click='changeCard(2)'>投票</div>
     <div class="card">上传作品</div>
-    <div id="demo">
+    <!--<div id="demo">
         <vue-metamask 
             userMessage="msg" 
             @onComplete="onComplete"
         >
         </vue-metamask>
-    </div>  
+    </div> -->
   </div>
   
   <div class="main">
@@ -70,7 +70,7 @@
 <script>
 var Web3 = require("web3")
 import axios from 'axios'
-import VueMetamask from 'vue-metamask';
+// import VueMetamask from 'vue-metamask';
 
 export default {
   data(){
@@ -371,7 +371,7 @@ export default {
     },
   },
   components: {
-      VueMetamask,
+      // VueMetamask,
   },
 }
 </script>
